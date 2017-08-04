@@ -75,3 +75,46 @@
 # def testme(pw):
 #     if len(pw) < 6 or pw.isalpha() or pw.isnumeric(): return False
 #     else: return True
+
+
+# Task 5
+# Improve the calculator by adding sin and cos functions from the math module
+
+# import math
+
+# def main():
+#     init()
+
+# def init():
+#     print("Calculator")
+#     num1 = int(input("Give the first number: "))
+#     num2 = int(input("Give the second number: "))
+
+#     while True:
+#         print("(1) +\n(2) -\n(3) *\n(4) /\n(5)sin(number1/number2)\n(6)cos(number1/number2)(7)Change numbers\n(8)Quit")
+#         print("Current numbers:", num1, num2)
+#         selection = int(input("Please select something (1-6): "))
+
+#         if selection == 1:
+#             print("The result is: " + str(num1 + num2))
+#         elif selection == 2:
+#             print("The result is: " + str(num1 - num2))
+#         elif selection == 3:
+#             print("The result is: " + str(num1 * num2))
+#         elif selection == 4:
+#             print("The result is: " + str(num1 / num2))
+#         elif selection == 5:
+#             print("The result is: " + str(math.sin(num1 / num2)))
+#         elif selection == 6:
+#             print("The result is: " + str(math.cos(num1 / num2)))
+#         elif selection == 7:
+#             num1 = int(input("Give the first number: "))
+#             num2 = int(input("Give the second number: "))
+#         elif selection == 8:
+#             print("Thank you!")
+#             break
+#         else:
+#             result = "Selection was not correct."
+
+# if __name__ == "__main__":
+#     main()
