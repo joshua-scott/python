@@ -37,6 +37,20 @@
 # Task 4
 # Return values
 
+def main():
+    while True:
+        string = input("Write something (quit ends): ")
+        if string == "quit": 
+            quit()
+        elif len(string) < 10: 
+            tester()
+        else: 
+            if tester(string):
+                print("X spotted!")
+
+def tester(givenstring = "Too short"):
+    print(givenstring)
+    return "x" in givenstring.lower()
 
 # Call main if this file has been started as a program
 if __name__ == "__main__":
