@@ -118,3 +118,37 @@
 
 # if __name__ == "__main__":
 #     main()
+
+
+# Task 6
+# Improve the notebook so it appends the current date/time to the end of each note
+
+import time		
+
+time.strftime("%X %x")
+
+while True:
+    print( 
+    """(1) Read the notebook
+(2) Add note
+(3) Empty the notebook
+(4) Quit""")
+
+    selection = int(input("Please select one: "))
+
+    if selection == 1:
+        notebook = open("notebook.txt", "r")
+        print(notebook.read())
+        notebook.close()
+    elif selection == 2:
+        notebook = open("notebook.txt", "a")
+        newNote = input("Write a new note: ")
+        notebook.write(newNote + ":::" + time.strftime("%X %x"))
+        notebook.close()
+    elif selection == 3:
+        notebook = open("notebook.txt", "w")
+        notebook.close()
+        print("Notes deleted.")
+    elif selection == 4:
+        print("Notebook shutting down, thank you.")
+        quit()
