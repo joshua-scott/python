@@ -29,10 +29,11 @@ def displayOptions():
 
 def setNotebook(filename):
     try:
-        return pickle.load(open(filename, "rb"))
+        with open(filename, "rb") as source:
+            return pickle.load(source)
     except Exception:
-        with open(filename, "wb") as f:
-            pickle.dump([], f)
+        with open(filename, "wb") as newfile:
+            pickle.dump([], newfile)
             print("\nNo default notebook was found, created one.")
             return []
 
