@@ -1,14 +1,15 @@
 # Task 1
 # Basic lists
-# myList = [ "Blue", "Red", "Yellow", "Green" ]
-# print("The first item in the list is:", myList[0])
-# print("The entire list printed one at a time:")
-# for i in myList: print(i)
+myList = [ "Blue", "Red", "Yellow", "Green" ]
+print("The first item in the list is:", myList[0])
+print("The entire list printed one at a time:")
+for i in myList: print(i)
 
 
 # Task 2
 # Use lists to allow the user to: 
 # (1) add products, (2) remove items and (3) print the list and quit.
+
 def main():
     shoppingList = []
 
@@ -50,3 +51,14 @@ def gracefulExit(list):
 
 if __name__ == "__main__":
     main()
+
+# Task 3
+# Reading a list from a file and sort it
+with open("words.txt") as sourcefile:           # read each line into a list
+    content = sourcefile.readlines()
+
+content = [word.strip() for word in content]    # strip newline chars
+content.sort()                                  # sort to alphabetical order
+
+print("Words in an alphabetical order:")
+for i in content: print(i)
