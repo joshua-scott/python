@@ -62,3 +62,38 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# Task 4
+# Using inheritance to extend a class
+
+class Customer:
+    name = "John Johnsson"
+    total = 1000
+    paymenttype = "Masterexpress"
+    number = "1234-5678-9012345"
+    def printout(self):
+        print("Name: ", self.name)
+        print("Total: ", self.total)
+        print("Payment type: ", self.paymenttype)
+        print("Card/Bill number: ", self.number)
+
+ A method "addbill", which increases the attribute total by 50, and 
+2) a method "payment" which decreases the attribute total by 100.
+
+class ManageCustomer(Customer):     # This class will also have all the attributes/methods of Customer
+    def addbill(self):
+        self.total += 50
+    def payment(self):
+        self.total -= 100
+
+def main():
+    person = ManageCustomer()
+    person.name = "Homer Griffin"
+    person.addbill()
+    person.payment()
+    person.payment()
+    person.printout()
+
+if __name__ == "__main__":
+    main()
