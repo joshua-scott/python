@@ -1,5 +1,6 @@
 # Task 1:
 # Basic class and object creation
+
 class Player:
     """Class for player."""
     teamColour = "___"
@@ -77,9 +78,6 @@ class Customer:
         print("Total: ", self.total)
         print("Payment type: ", self.paymenttype)
         print("Card/Bill number: ", self.number)
-
- A method "addbill", which increases the attribute total by 50, and 
-2) a method "payment" which decreases the attribute total by 100.
 
 class ManageCustomer(Customer):     # This class will also have all the attributes/methods of Customer
     def addbill(self):
